@@ -23,5 +23,19 @@ class ItemController extends Controller
         return redirect('/');
 
     }
+    public function delete($id)
+    {
+        $res = Item::where('id',$id)->delete();
+    }
+    public function edit(Request $request,$id)
+    {
+
+        $res = Item::find($id);
+        $res->title = $request->input('title');
+        $res->description = $request->input('description');
+        $res->save();
+        return redirect('/');
+
+    }
 
 }

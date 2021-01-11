@@ -20,3 +20,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::get('items', 'ItemController@index');
 Route::post('items', 'ItemController@new');
+Route::delete('items/{id}', 'ItemController@delete');
+Route::post('items/{id}', 'ItemController@edit');

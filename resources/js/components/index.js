@@ -11,6 +11,7 @@ export default function Index() {
     const itemList = items.map((item) => {
         return (
             <Items
+            id = {item.id}
             title = {item.title}
             description = {item.description}
             />
@@ -24,7 +25,7 @@ export default function Index() {
              <br />
              <Link
                  className= "btn btn-success"
-                     to="/create"
+                 to="/create"
              >New</Link>
               <hr />
              <div className="row">
